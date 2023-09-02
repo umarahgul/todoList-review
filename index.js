@@ -1,8 +1,14 @@
+
 import './style.css';
 
 import options from './assets/options.png';
 import bin from './assets/recyclebin.png';
+import bin from './assets/recyclebin.png';
 
+import options from './assets/options.png';
+
+import { updateStatus } from './status.js';
+const val = document.getElementById('inputVal');
 const todoList = [
   {
     description: 'wash dishes',
@@ -77,11 +83,6 @@ val.addEventListener('keypress', (event) => {
     populateList();
   }
 });
-import bin from './assets/recyclebin.png';
-
-import options from './assets/options.png';
-
-import { updateStatus } from './status.js';
 
 export const todoList = [];
 
@@ -184,7 +185,7 @@ export const populateList = () => {
 };
 
 export const curdFunctionality = () => {
-  const val = document.getElementById('inputVal');
+  
 
   const storedValue = localStorage.getItem('inputValue');
   if (storedValue) {
